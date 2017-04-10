@@ -23,6 +23,8 @@ body{ background: #003662; }
 .head ul li{ width: 108px; height: 26px; float: right; clear: left; line-height: 26px; text-align: center; background: url(../images/nav_blue.png) no-repeat; margin-left: -25px; }
 .head ul li.current{ background: url(../images/nav_white.png) no-repeat; }
 .head ul li.current a{ color: #444444; }
+.head ul li:hover{ background: url(../images/nav_white.png) no-repeat; }
+.head ul li:hover a{ color: #444444; }
 .head ul li a{ color: #ffffff; font-size: 14px; }
 
 /* 主页中间内容区 */
@@ -78,18 +80,49 @@ body{ background: #003662; }
 .content .home-bottom .home-bottom-link a{ width: 100%; float: left; margin-bottom: 5px; }
 .content .home-bottom .home-bottom-link a img{ float: left; }
 
+/* 底部 */
 .foot{ width: 1024px; margin:0 auto;  }
 .foot-l{ width: 50%; float: left;  }
 .foot-l a{ line-height: 50px; color: #ffffff; font-size: 14px; margin: 0 10px; float: left;}
 .foot-r{ width: 50%; float: right; }
 .foot-r img{ margin-top: 10px; }
 
+/* 子页面 */
+.daohang{ width: 100%; line-height: 40px; text-indent: 15px; font-size: 14px; }
+.daohang span{ color: #3d4a7f; font-size: 14px; }
+.daohang a{ font-size: 14px; }
+.newList{ width: 100%; }
+.newList ul{ float: left; }
+.newList li{ width: 400px; height: 60px; float: left; clear: right; overflow: hidden; margin: 25px 50px; }
+.newList li span{ width: 59px; height: 39px; float: left; color: #ffffff; background: url(../images/date_blue.png); text-align: center; padding: 10px 0; font-size: 14px;
+ line-height: 18px; }
+.newList li span b{ font-size: 14px; color: #ffffff; margin-top: 10px; }
+.newList li h3{ width: 316px; line-height: 26px; float: right; font-size: 14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.newList li p{ width: 316px; line-height: 14px; float: right; color: #666666;  }
+.newList li.current span{ background: url(../images/date_orange.png); }
+.newList dl{ float: right; margin-right: 50px; margin-top: 20px; }
+.newList dl dd{ float: left; clear:right; margin-right: 4px; width: 36px; height: 36px; border-radius: 3px; line-height: 36px; text-align: center; background: #ececec;
+	cursor: pointer; font-size: 14px; }
+.newList dl dd:hover{ background: #41a0f2; color: #ffffff; }
+.newList dl dd.current{ background: #41a0f2; color: #ffffff; }
 
-
-
-
-
-
+/* 平台服务 */
+.service{ width: 100%; }
+.service .service-nav{ width: 210px; border: 1px solid #dfddde; float: left; margin-left: 15px; }
+.service .service-nav dl dt{ width: 100%; height: 36px; line-height: 36px; float: left; border-bottom: 1px solid #dfddde; font-size: 16px; background: #f4f4f4; text-indent: 60px; }
+.service .service-nav dl dd{ width: 100%; height: 36px; line-height: 36px; float: left; border-bottom: 1px solid #dfddde; text-indent: 60px; }
+.service .service-nav dl dd a{ width:100%; height: 100%; display: block; font-size: 14px; }
+.service .service-nav dl dd.last{ border-bottom: none; }
+.service .service-nav dl dd:hover{ background: #ff8d1b; }
+.service .service-nav dl dd:hover a{ color: #ffffff; background: url(../images/icon-right.png) no-repeat; background-position: 40px 13px; }
+.service .service-content{ width: 720px; float: left; clear: right; margin-left: 15px; }
+.service .service-content .service-content-daohang{ width: 100%; height: 36px; float: left; color: #999999; line-height: 36px; border-bottom: 1px solid #dfddde; font-size: 14px; }
+.service .service-content .service-content-daohang span{ color: #333333; font-size: 14px; }
+.service .service-content .service-content-content{ width: 100%; float: left; }
+.service .service-content .service-content-content img{ float: left; margin-bottom: 9999px;  margin-right: 20px; }
+.service .service-content .service-content-content h1{ line-height: 32px; font-size: 16px; margin-top: 10px; }
+.service .service-content .service-content-content p{ line-height: 20px; font-size: 14px; margin-top: 5px; }
+.service .service-content .service-content-content a{ padding: 5px 20px; border:1px solid #006ebd; color: #006ebd; display: inline-block; margin-top: 20px; }
 
 
 
