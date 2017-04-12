@@ -7,32 +7,6 @@ $(function(){
 		$(this).find("span").hide();
 	});
 
-	//首页轮播图
-	var bannerImg = $(".banner ul li");
-	var bannerDl = $(".banner dl dd");
-	var num = 0,adTimer = null;
-	function bannerScroll(){
-		num++;
-		bannerImg.eq(num).show().siblings().hide();
-		bannerDl.eq(num).addClass("current").siblings().removeClass("current");
-		if (num == 3) {
-			num = -1;
-		}
-	};
-	var adTimer = setInterval(bannerScroll,2000);
-	$(".banner").hover(function(){
-		clearInterval(adTimer);
-	},function(){
-		adTimer = setInterval(bannerScroll,2000);
-	});
-
-	bannerDl.on("click",function(){
-		$(this).addClass("current").siblings().removeClass("current");
-		bannerImg.eq($(this).index()).show().siblings().hide();
-		num = $(this).index();
-		if (num == 3) num = -1;
-	});
-
 	//新闻列表页列表切换
 	$(".tab-list1-nav li").on("click",function(){
 		$(this).addClass("current").siblings().removeClass("current");
@@ -42,5 +16,25 @@ $(function(){
 		$(this).addClass("current").siblings().removeClass("current");
 		$(".tab-list3-content ul").eq($(this).index()).show().siblings().hide();
 	});
+
+	//口岸风采图片滚动
+	var mienLi = $(".mien ul li"),clickNum = 0;;
+	if (mienLi.length > 3) {
+		$(".mien .forward").click(function(){
+			if (clickNum < mienLi.length-3) {
+				mienLi.eq(clickNum).hide();
+				mienLi.eq(clickNum+3).show();
+				clickNum++;
+			}
+		});
+		$(".mien .back").click(function(){
+			if (clickNum > 0) {
+				mienLi.eq(clickNum+3).hide();
+				clickNum--;
+				mienLi.eq(clickNum).show();
+			}
+		});
+	}
+	
 
 })
