@@ -1,7 +1,7 @@
 $(function(){
 	$.ajax({
 		type: "post",   
-        url: "data/home.JSON",
+        url: "data/home.json",
         contentType: "application/json",
         dataType: 'json',
         success: function(data) { 
@@ -14,7 +14,7 @@ $(function(){
             		shiwuTemp = data.data.shiwu;
             	var dongtaiList = '',
             		tongzhiList = '',
-            		focusList = '',
+            		focusList = '',focusDdList = '',
             		zhengceList = '',
             		zhinanList='',
             		shiwuList='';
@@ -34,13 +34,16 @@ $(function(){
             	//焦点图
             	for (var i = 0; i < focusTemp.length; i++) {
             		focusList += '<li><a href="news-detail.html?id='+ focusTemp[i].id +'"><img src="'+ focusTemp[i].img +'" alt="" /></a><span>'+ focusTemp[i].name +'</span></li>';
+                    focusDdList += '<dd>'+ Number(i+1) +'</dd>'
             	}
             	$(".banner ul").append(focusList);
+                $(".banner dl").append(focusDdList);
 
 				//首页焦点图动画效果
 				var bannerImg = $(".banner ul li");
 				var bannerDl = $(".banner dl dd");
 				var num = 0,adTimer = null;
+                bannerDl.eq(0).addClass("current");
 				function bannerScroll(){
 					num++;
 					bannerImg.eq(num).show().siblings().hide();
