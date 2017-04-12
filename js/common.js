@@ -17,24 +17,7 @@ $(function(){
 		$(".tab-list3-content ul").eq($(this).index()).show().siblings().hide();
 	});
 
-	//口岸风采图片滚动
-	var mienLi = $(".mien ul li"),clickNum = 0;;
-	if (mienLi.length > 3) {
-		$(".mien .forward").click(function(){
-			if (clickNum < mienLi.length-3) {
-				mienLi.eq(clickNum).hide();
-				mienLi.eq(clickNum+3).show();
-				clickNum++;
-			}
-		});
-		$(".mien .back").click(function(){
-			if (clickNum > 0) {
-				mienLi.eq(clickNum+3).hide();
-				clickNum--;
-				mienLi.eq(clickNum).show();
-			}
-		});
-	}
+	
 	
 
 })

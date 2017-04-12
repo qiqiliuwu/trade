@@ -120,11 +120,12 @@ body{ background: #003662; }
 .service .service-content{ width: 720px; float: left; clear: right; margin-left: 15px; margin-bottom: 50px; }
 .service .service-content .service-content-daohang{ width: 100%; height: 36px; float: left; color: #999999; line-height: 36px; border-bottom: 1px solid #dfddde;  }
 .service .service-content .service-content-daohang span{ color: #333333;  }
-.service .service-content .service-content-content{ width: 100%;  height: auto; float: left; overflow: hidden;  margin-bottom: -9999px; padding-bottom: 9999px; }
+.service .service-content .service-content-content{ width: 100%;  height: auto; float: left; }
 .service .service-content .service-content-content img{ float: left;  margin-right: 20px; }
 .service .service-content .service-content-content h1{ line-height: 32px; font-size: 16px; margin-top: 10px;  }
 .service .service-content .service-content-content p{ line-height: 20px;  margin-top: 5px; }
-.service .service-content .service-content-content a{ padding: 5px 20px; border:1px solid #006ebd; color: #006ebd; display: inline-block; margin-top: 20px; }
+.service .service-content .service-content-content a{ padding: 5px 20px; float: right; border:1px solid #006ebd; color: #006ebd; display: inline-block; margin-top: 20px;
+	margin-right: 296px; }
 
 /* 用户登录 */
 .user-title{ padding: 10px 30px; font-size: 16px; line-height: 26px; font-weight: bold; }
@@ -133,10 +134,10 @@ body{ background: #003662; }
 .login label{ width: 100%; float: left; position: relative; line-height: 36px; margin-bottom: 15px;  }
 .login label b{ color: red; float: left; clear: right; margin-right: 5px; }
 .login label input{ width: 260px; height: 34px; border: 1px solid #dedede; float: right; text-indent: 10px; margin-right: 10px; }
-.login label span{ width: 300px; color: red; position: absolute; left: 350px; top: 0;  }
+.login label span{ width: 300px; color: red; position: absolute; left: 350px; top: 0; display: none; }
 .login label em{ width: 15px; display: inline-block; }
 .login button{ width: 262px; height: 36px; line-height: 36px; font-size: 16px; color: #ffffff; background: #0d76c9; float: right; margin-right: 10px; 
-	border: none; border-radius: 5px; }
+	border: none; border-radius: 5px; cursor: pointer; }
 .login ul{ width: 100%; float: left; margin-top: 50px; }
 .login ul li{ width: 33%; float: left; clear: right; text-align: center; height: 14px;  line-height: 12px; border-right: 1px solid #999999; }
 .login ul li.last{ border:none; }
@@ -158,7 +159,8 @@ body{ background: #003662; }
 .mien ul{ width: 824px; height: 310px; float: left; clear: right; overflow: hidden; }
 .mien ul li{ width: 240px; float: left; clear: right; margin: 0 17px; border-top: 3px solid #ff8d1b; }
 .mien ul li img{ float: left; width: 100%; height: 215px; margin-bottom: 5px; }
-.mien ul li h3{ width: 100%; float: left; line-height: 26px; text-align: center; border-bottom: 1px solid #dedede; background: #f9f9f9; }
+.mien ul li h3{ width: 100%; float: left; line-height: 26px; text-indent: 5px; text-align: center; border-bottom: 1px solid #dedede; background: #f9f9f9; 
+	 white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .mien ul li span{ width: 100%; float: left; line-height: 36px; text-align: center; font-size: 12px; color: #999999; background: #f9f9f9; }
 .mien ul li div{ width: 100%; height: 25px; float: left; }
 .mien ul li div img{ height: 25px; }
