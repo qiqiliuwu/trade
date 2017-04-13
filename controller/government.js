@@ -21,8 +21,11 @@ $(function(){
     //如果要查找参数key:
     if(args["page"]!=undefined){
         //如果要查找参数key:
-        var page = args["page"] ;
+        var page = args["page"];
     }   
+    if(args["name"]!=undefined){
+       var name = args["name"]; 
+    }
 
 	$.ajax({
 		type: "post",   
@@ -36,7 +39,7 @@ $(function(){
             	//新闻动态
             	for (var i = 0; i < newsTemp.length; i++) {
             		newsList += '<li>'+
-                                    '<a href="government-detail.html?id='+ newsTemp[i].id +'"">'+
+                                    '<a href="government-detail.html?id='+ newsTemp[i].id +'&name='+ name +'">'+
                                         '<span><b>'+ newsTemp[i].year +'</b><br />'+ newsTemp[i].date +'</span>'+
                                         '<h3>'+ newsTemp[i].name +'</h3>'+
                                         '<p>'+ newsTemp[i].des +'</p>'+
@@ -52,7 +55,7 @@ $(function(){
                 $(".newList ul li").eq(0).addClass("current");
 
                 $(".newList dl dd").on("click", function(){
-                    location.href = "government.html?page="+Number($(this).index()+1);
+                    location.href = "government.html?page="+Number($(this).index()+1)+"&name="+name;
                 });
 
             }

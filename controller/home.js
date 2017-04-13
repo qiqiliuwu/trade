@@ -21,7 +21,7 @@ $(function(){
 
             	//新闻动态
             	for (var i = 0; i < dongtaiTemp.length; i++) {
-            		dongtaiList += '<li><a href="news-detail.html?id='+ dongtaiTemp[i].id +'">'+ dongtaiTemp[i].name +'</a><span>'+ dongtaiTemp[i].date +'</span></li>';
+            		dongtaiList += '<li><a href="news-detail.html?id='+ dongtaiTemp[i].id +'&name=news">'+ dongtaiTemp[i].name +'</a><span>'+ dongtaiTemp[i].date +'</span></li>';
             	}
             	$(".tab-list1-content ul").eq(0).append(dongtaiList);
 
